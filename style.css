@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --softblue: hsl(215, 51%, 70%);
+    --verydarkbluebg: hsl(217, 54%, 11%);
+    --verydarkbluecard: hsl(216, 50%, 16%);
+    --verydarkblueline: hsl(215, 32%, 27%);
+    --cyan:hsl(178, 100%, 50%);
+    font-family: 'Outfit';
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+    /* outline:2px solid red; */
+}
+
+body{
+    background-color: var(--verydarkbluebg);
+}
+.container{
+    max-width: 350px;
+    background-color: var(--verydarkbluecard);
+    border-radius: 15px;
+    margin: 0 auto;
+    padding:20px;
+}
+
+.container-image img{
+    display: block;
+    max-width:100%;
+    border-radius: 5px;
+}
+
+.container .container-image{
+    position: relative;
+}
+
+.container-image div{
+    position: absolute;
+    top:0;
+    background-color: hsl(178, 100%, 50%,40%);
+    width: 100%;
+    height:100%;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.container-image div:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+.container-image div img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+header h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+header h4:hover{
+    color: var(--cyan);
+    cursor: pointer;
+} 
+
+header p{
+    font-weight: 300;
+    color: var(--softblue);
+}
+
+.info{
+    border-bottom: 1px solid var(--softblue);
+    margin-bottom:10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info .info-para-1{
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.info .info-para-1 img{
+    margin-right: 5px;
+}
+.info .info-para-2 img{
+    margin-right: 5px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+footer img{
+    width:50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+footer span{
+    color: var(--softblue);
+}
+
+footer p:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
